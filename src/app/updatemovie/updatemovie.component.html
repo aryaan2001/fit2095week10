@@ -1,0 +1,29 @@
+<!-- Section 5: Add Exist Actor to a Movie  -->
+    <div class="form-group">
+        <table class="table table-striped">
+            <tr>
+              <th>Name</th>
+              <th>Birth Year</th>
+              <th>Select!</th>
+            </tr>
+            <tr *ngFor="let item of actorsDB">
+              <td>{{item.name}}</td>
+              <td>{{item.year}}</td>
+              <td><button type="submit" class="btn btn-primary" (click)="onSelectUpdateActor(item)">Update</button></td>
+            </tr>
+          </table>
+          <table class="table table-striped">
+            <tr>
+              <th>Title</th>
+              <th> Year</th>
+              <th>Select!</th>
+            </tr>
+            <tr *ngFor="let item of moviesDB">
+              <td>{{item.title}}</td>
+              <td>{{item.year}}</td>
+              <td><button type="submit" class="btn btn-primary" (click)="onSelectUpdateMovie(item)">Update</button></td>
+            </tr>
+          </table>
+      </div>
+    <button type="submit" class="btn btn-primary" (click)="onUpdateMovie()">Add Actor to Movie</button> 
+    
